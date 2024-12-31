@@ -2,19 +2,20 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { XMindEmbedViewer } from 'xmind-embed-viewer'
+import { useKeyPress } from 'ahooks'
 import { LoadingSpinner } from '@/components/ui/loading-spinner'
 
 const EXAMPLE_XMIND_URL = '' // TODO
 
 export default function XmindRender({ fileURL }: { fileURL?: string }) {
-  console.log({ fileURL })
   const [loading, setLoading] = useState(true)
 
-  const viewerRef = useRef<HTMLDivElement>(null)
+  const viewerRef = useRef<XMindEmbedViewer>()
+  const viewerDomRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     async function initXmind() {
-      if (!viewerRef.current) {
+      if (!viewerDomRef.current) {
         return
       }
 
@@ -33,10 +34,44 @@ export default function XmindRender({ fileURL }: { fileURL?: string }) {
       viewer.addEventListener('map-ready', () => {
         setLoading(false)
       })
+
+      if (!viewerRef.current) {
+        viewerRef.current = viewer
+      }
     }
 
     initXmind()
   }, [fileURL])
+
+  useKeyPress('f', () => {
+    viewerRef.current?.setFitMap()
+  })
+
+  useKeyPress(['a', 'subtract'], () => {
+    const viewer = viewerRef.current
+    const curZoom = viewer?.zoom || 1
+    const nextZoom = curZoom - 20
+    viewer?.setZoomScale(nextZoom)
+  })
+
+  useKeyPress(['s', 'add'], () => {
+    const viewer = viewerRef.current
+    const curZoom = viewer?.zoom || 1
+    const nextZoom = curZoom + 20
+    viewer?.setZoomScale(nextZoom)
+  })
+
+  useKeyPress(['d', '0'], () => {
+    const viewer = viewerRef.current
+    viewer?.setZoomScale(100)
+  })
+
+  useKeyPress(['c'], () => {
+    const viewer = viewerRef.current
+    const curZoom = viewer?.zoom || 1
+    viewer?.setFitMap()
+    viewer?.setZoomScale(curZoom)
+  })
 
   return (
     <div className="h-full">
@@ -45,7 +80,7 @@ export default function XmindRender({ fileURL }: { fileURL?: string }) {
           <LoadingSpinner />
         </div>
       ) : null}
-      <div id="xmind-viewer" ref={viewerRef} />
+      <div id="xmind-viewer" ref={viewerDomRef} />
     </div>
   )
 }
