@@ -34,7 +34,7 @@ export async function generateMetadata(
 export default async function MindMap({ params }: PageProps) {
   return (
     <div className="h-full flex flex-col">
-      <XmindViewer fileURL={`/DVA-C02/${params.slug}.xmind`} />
+      <XmindViewer fileURL={`/dva-c02/${params.slug}.xmind`} />
     </div>
   )
 }

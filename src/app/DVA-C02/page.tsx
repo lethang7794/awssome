@@ -11,7 +11,7 @@ export default async function Home() {
             <li key={item.name + item.name} className="">
               <Link
                 className="text-blue-600 dark:text-blue-500 hover:underline mr-2"
-                href={`/DVA-CO2/${item.slug}`}
+                href={`/DVA-C02/${item.slug}`}
               >
                 {item.name}
                 <span className="ml-2 italic">
