@@ -18,8 +18,8 @@ export async function getMarkdown(path: string) {
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkAlert)
-    .use(remarkRehype)
-    .use(rehypeStringify)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeStringify, { allowDangerousHtml: true })
     .processSync(fileContents)
   const contentHtml = processedContent.toString()
 
