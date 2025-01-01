@@ -1,7 +1,11 @@
 import fs from 'node:fs'
 import matter from 'gray-matter'
-import { remark } from 'remark'
-import html from 'remark-html'
+import { remarkAlert } from 'remark-github-blockquote-alert'
+import rehypeStringify from 'rehype-stringify'
+import remarkGfm from 'remark-gfm'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import { unified } from 'unified'
 
 export async function getMarkdown(path: string) {
   const fileContents = fs.readFileSync(path, 'utf8')
@@ -10,9 +14,13 @@ export async function getMarkdown(path: string) {
   const matterResult = matter(fileContents)
 
   // Use remark to convert markdown into HTML string
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content)
+  const processedContent = unified()
+    .use(remarkParse)
+    .use(remarkGfm)
+    .use(remarkAlert)
+    .use(remarkRehype)
+    .use(rehypeStringify)
+    .processSync(fileContents)
   const contentHtml = processedContent.toString()
 
   // Combine the data with the contentHtml

@@ -56,3 +56,10 @@
 .markdown-body table.no-border td {
   border: none;
 }
+
+/*
+ * List
+ */
+.markdown-body ul {
+  list-style-type: disc;
+}
