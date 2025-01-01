@@ -13,6 +13,17 @@ export const metadata: Metadata = {
   title: 'AWS DVA-C02 Mind Maps',
   description:
     'Mind maps for AWS Certified Developer - Associate (DVA-C02) based on Cantrill course, AWS marketing page, AWS official documentation, and many other sources.',
+  other: {
+    env: process.env.BUILD_ENV || process.env.GIT_BRANCH || '',
+    version: [
+      process.env.GIT_COMMIT_TAG,
+      process.env.GIT_COMMIT_HASH,
+      process.env.GIT_COMMIT_DATE,
+    ]
+      .filter(Boolean)
+      .join(' - '),
+    'deployed-at': process.env.BUILD_DATE || '',
+  },
 }
 
 export default function RootLayout({
