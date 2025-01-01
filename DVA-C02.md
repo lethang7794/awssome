@@ -110,6 +110,24 @@
 
     Services: Elastic Beanstalk
 
+## How to interact with the mind map
+
+| Action       | Mobile               | Desktop                   |
+| ------------ | -------------------- | ------------------------- |
+| Move the map | Drag with one finger | Scroll up/down left/right |
+| Zoom Out     | Two fingers pinch    | Two fingers pinch / `A`   |
+| Zoom In      | Two fingers spread   | Two fingers spread / `S`  |
+
+### Keyboard shortcuts (for Desktop)
+
+| Action              | Shortcut | Note                  |
+| ------------------- | -------- | --------------------- |
+| Zoom Out            | `A`, `-` |                       |
+| Zoom In             | `S`, `+` |                       |
+| Actual Size         | `D`,     |                       |
+| Fit Map             | `F`, `0` |                       |
+| Go to Central Topic | `C`      | There will be a flick |
+
 ## For more information about the mind maps and how they are hosted
 
 See [README](/)
