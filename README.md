@@ -58,6 +58,13 @@ This is an [Next.js](https://nextjs.org/) project bootstrapped with [`create-nex
   - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
   - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
+## Roadmap
+
+- [ ] Show thumbnail of the mind map.
+- [ ] Open a specific sheet of the mind map.
+- [ ] Show last updated time for each page.
+- [ ] Show last updated time for each mind map.
+
 ## How to contribute
 
 You can
