@@ -27,7 +27,7 @@ export default function XmindRender({ fileURL }: { fileURL?: string }) {
         region: 'global',
         isPitchModeDisabled: true,
         styles: {
-          height: '100vh',
+          height: '100%',
           width: '100%',
         },
       })
@@ -80,7 +80,7 @@ export default function XmindRender({ fileURL }: { fileURL?: string }) {
           <LoadingSpinner />
         </div>
       ) : null}
-      <div id="xmind-viewer" ref={viewerDomRef} />
+      <div id="xmind-viewer" ref={viewerDomRef} className="h-full" />
     </div>
   )
 }
