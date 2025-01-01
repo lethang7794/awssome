@@ -9,9 +9,9 @@ const fontSans = FontSans({
 })
 
 export const metadata: Metadata = {
-  title: 'An Toàn Giao Thông',
+  title: 'AWS DVA-C02 Mind Maps',
   description:
-    'Tra cứu văn bản pháp luật về giao thông đường bộ, biển báo giao thông, vạch kẻ đường, thuật ngữ giao thông đường bộ...',
+    'Mind maps for AWS Certified Developer - Associate (DVA-C02) based on Cantrill course, AWS marketing page, AWS official documentation, and many other sources.',
 }
 
 export default function RootLayout({
