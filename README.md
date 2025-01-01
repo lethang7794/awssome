@@ -67,6 +67,7 @@ You can
 
 ## Credits
 
+- [acantril/aws-dev-associate], [acantril/learn-cantrill-io-labs] for the slides of the course
 - [Next.js]
 - [XMind Embed Viewer]
 - [remark] and its plugins
@@ -91,3 +92,5 @@ This project is licensed under the terms of the [MIT license](/LICENSE).
 [opening an issue]: https://github.com/lethang7794/aws-dva/issues/new/choose
 [remark]: https://github.com/remarkjs/remark
 [sindresorhus/github-markdown-css]: https://github.com/sindresorhus/github-markdown-css
+[acantril/aws-dev-associate]: https://github.com/acantril/aws-dev-associate
+[acantril/learn-cantrill-io-labs]: https://github.com/acantril/learn-cantrill-io-labs
