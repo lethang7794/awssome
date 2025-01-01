@@ -19,7 +19,7 @@ Each mind map can have more than one sheets.
 
 ### View the mind maps online
 
-See [List of the mind maps](/DVA-C02)
+👉👉👉👉👉 See [List of the mind maps](/DVA-C02) 👈👈👈👈👈
 
 > [!WARNING]
 > Some of the features of Xmind doesn't work, e.g. link.
