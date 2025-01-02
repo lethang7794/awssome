@@ -1,6 +1,6 @@
-# List of the mind maps for AWS DVA-C02
+# Mind maps for AWS DVA-C02
 
-## You can view the mind maps online with the following links
+## View the mind maps online with the following links
 
 1. <a href="/DVA-C02/03-Cloud-Networking-TechFundamentals" target="_blank">Cloud, Networking, Tech Fundamentals</a>
 
@@ -110,7 +110,16 @@
 
     Services: Elastic Beanstalk
 
+> [!TIP]
+> Each mind map can have more than one sheets.
+
 ## How to interact with the mind map
+
+<details>
+
+<summary>Click to expand</summary>
+
+### Actions
 
 | Action       | Mobile               | Desktop                   |
 | ------------ | -------------------- | ------------------------- |
@@ -128,6 +137,8 @@
 | Fit Map             | `F`, `0` |                       |
 | Go to Central Topic | `C`      | There will be a flick |
 
-## For more information about the mind maps and how they are hosted
+</details>
+
+## Wanna know more about this project?
 
 See [README](/)
