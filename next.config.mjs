@@ -6,7 +6,7 @@ import remarkGfm from 'remark-gfm'
 
 import { getBuildInfo } from './scripts/getBuildInfo.mjs'
 
-export default async (phase, { defaultConfig }) => {
+const nextConfigFunction = async (phase, { defaultConfig }) => {
   const buildInfo = getBuildInfo()
 
   /**
@@ -36,3 +36,5 @@ export default async (phase, { defaultConfig }) => {
   // Merge MDX config with Next.js config
   return withMDX(nextConfig)
 }
+
+export default nextConfigFunction
