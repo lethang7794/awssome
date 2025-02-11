@@ -1,5 +1,5 @@
-import MarkdownViewer from '@/components/markdown-viewer'
+import { redirect } from 'next/navigation'
 
 export default async function Home() {
-  return <MarkdownViewer path="README.md" />
+  redirect("/DVA-C02")
 }

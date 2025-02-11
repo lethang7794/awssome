@@ -1,5 +1,10 @@
-import MarkdownViewer from '@/components/markdown-viewer'
+import MdxLayout from '@/components/layout/mdx-layout'
+import DvaC02Page from '../../../DVA-C02.mdx'
 
 export default async function Home() {
-  return <MarkdownViewer path="DVA-C02.md" />
+  return (
+    <MdxLayout>
+      <DvaC02Page />
+    </MdxLayout>
+  )
 }
