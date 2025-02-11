@@ -20,7 +20,7 @@ export function NavHeader({
   return (
     <nav
       className={cn(
-        'sticky top-0 bg-white z-50 h-(--header-height) shadow-md flex items-center',
+        'sticky top-0 bg-black text-white z-50 h-12 shadow-md flex items-center',
         className
       )}
     >
@@ -34,7 +34,7 @@ export function NavHeader({
               <ChevronLeft size="32" />
             </Link>
             <div className="grow" />
-            <div className="mx-1.5 font-bold line-clamp-2 text-black">
+            <div className="mx-1.5 font-bold line-clamp-2 text-white">
               {title}
             </div>
             <div className="grow" />

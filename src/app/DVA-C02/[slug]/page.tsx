@@ -41,13 +41,11 @@ export default async function MindMap({ params }: PageProps) {
   }
 
   return (
-    <>
+    <div className="h-full flex flex-col">
       <NavHeader backHref="/DVA-C02" title={`DVA-C02: ${item.name}`} />
-      <div className="h-full flex flex-col">
-        <XmindViewer
-          fileURL={`${process.env.NEXT_PUBLIC_BASE_PATH}/dva-c02/${params.slug}.xmind`}
-        />
-      </div>
-    </>
+      <XmindViewer
+        fileURL={`${process.env.NEXT_PUBLIC_BASE_PATH}/dva-c02/${params.slug}.xmind`}
+      />
+    </div>
   )
 }
