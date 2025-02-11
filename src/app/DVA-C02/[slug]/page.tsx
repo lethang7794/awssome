@@ -1,6 +1,7 @@
 import type { ResolvingMetadata, Metadata } from 'next'
 import { getMindMapById, getMindMapsArray } from '@/service/dva'
 import XmindViewer from '@/components/xmind-viewer'
+import { NavHeader } from '@/components/block/nav-header'
 
 type PageProps = {
   params: { slug: string }
@@ -32,9 +33,21 @@ export async function generateMetadata(
 }
 
 export default async function MindMap({ params }: PageProps) {
+  const slug = params.slug
+  const decodedSlug = slug.replace('%2C', ',')
+  const item = getMindMapById(decodedSlug)
+  if (!item) {
+    return 'Not Found'
+  }
+
   return (
-    <div className="h-full flex flex-col">
-      <XmindViewer fileURL={`/dva-c02/${params.slug}.xmind`} />
-    </div>
+    <>
+      <NavHeader backHref="/DVA-C02" title={`DVA-C02: ${item.name}`} />
+      <div className="h-full flex flex-col">
+        <XmindViewer
+          fileURL={`${process.env.NEXT_PUBLIC_BASE_PATH}/dva-c02/${params.slug}.xmind`}
+        />
+      </div>
+    </>
   )
 }
