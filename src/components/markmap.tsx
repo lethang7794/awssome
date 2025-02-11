@@ -34,7 +34,6 @@ export default function MarkmapRender({ data, extra }: MarkmapRenderProps) {
     // Create markmap and save to refMm
     if (refMm.current || !refToolbar.current || !refSvg.current) return
     const mm = Markmap.create(refSvg.current)
-    console.log('create', refSvg.current)
     refMm.current = mm
     renderToolbar(refMm.current, refToolbar.current)
   }, [])
