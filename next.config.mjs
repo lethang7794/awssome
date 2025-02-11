@@ -15,6 +15,7 @@ const nextConfigFunction = async (phase, { defaultConfig }) => {
   const nextConfig = {
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
     transpilePackages: ['next-mdx-remote'],
+    output: 'export',
     env: { ...buildInfo },
   }
 
