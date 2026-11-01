@@ -13,7 +13,6 @@ const buildInfo = getBuildInfo()
  */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-  transpilePackages: ['next-mdx-remote'],
   basePath: process.env.NEXT_PUBLIC_BASE_PATH || undefined,
   output: 'export',
   env: { ...buildInfo },
