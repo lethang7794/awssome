@@ -116,3 +116,9 @@ This project is licensed under the terms of the [MIT license](/LICENSE).
 [sindresorhus/github-markdown-css]: https://github.com/sindresorhus/github-markdown-css
 [acantril/aws-dev-associate]: https://github.com/acantril/aws-dev-associate
 [acantril/learn-cantrill-io-labs]: https://github.com/acantril/learn-cantrill-io-labs
+
+## Viewer reliability and tests
+
+If a mind map cannot load within 30 seconds, the viewer offers **Try again** and a direct **Download mind map** link. Downloaded `.xmind` files can be opened in Xmind even when the embedded viewer is unavailable.
+
+Use Node.js 22.18 or newer and run `npm test`. The dependency-free regression tests cover failed requests, timeouts, readiness, and cleanup during navigation using a mocked embed viewer. After installing dependencies, also run `pnpm build` and check a map in a browser; these tests do not contact Xmind's hosted viewer.
