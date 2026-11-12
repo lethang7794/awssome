@@ -8,6 +8,9 @@ Currently, there are mind maps for
 
 ### AWS Certified Developer - Associate (DVA-C02)
 
+> [!NOTE]
+> AWS says the last day to take DVA-C02 is 30 November 2026, and DVA-C03 general availability begins 1 December 2026 ([AWS announcement](https://aws.amazon.com/blogs/training-and-certification/september-2026-new-offerings/)). These mind maps follow DVA-C02, so check the DVA-C03 exam guide for changes. Free DVA-C03 practice questions: [ExamCrest](https://examcrest.com/exam/aws-dva-c03/free-questions?utm_source=github&utm_campaign=lethang-awssome) (no signup; full mock tests are paid).
+
 The mind maps for DVA-C02 are based on:
 
 1. Cantrill courses: **DVA-C02** course[^2] (Paid course) & **Tech fundamentals** course[^3] (Free course)
